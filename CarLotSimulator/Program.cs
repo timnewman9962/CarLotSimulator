@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CarLotSimulator
 {
@@ -19,8 +20,52 @@ namespace CarLotSimulator
             //Call each of the methods for each car
 
             //*************BONUS*************//
+            var JoesCars = new CarLot();
 
             // Set the properties utilizing the 3 different ways we learned about, one way for each car
+            var CarOne = new Car();
+            CarOne.Year = 2020;
+            CarOne.Make = "Chevy";
+            CarOne.Model = "Impala";
+            CarOne.EngineNoise = "hummmmm";
+            CarOne.HonkNoise = "hawwwwnk";
+            CarOne.IsDriveable = true;
+            Console.WriteLine($"What's that noise coming from the {CarOne.Year} {CarOne.Make} {CarOne.Model}?");
+            CarOne.MakeEngineNoise(Console.ReadLine());
+            Console.WriteLine("Let me hear the horn!");
+            CarOne.MakeHonkNoise(Console.ReadLine());
+
+            JoesCars.AddCar(CarOne);
+
+            var CarTwo = new Car()
+            {
+                Year = 2000,
+                Make = "Crysler",
+                Model = "PT Cruiser",
+                EngineNoise = "put-put-put-put",
+                HonkNoise = "ahh-OOO-gaa",
+                IsDriveable = true
+            };
+            Console.WriteLine($"What's that noise coming from the {CarTwo.Year} {CarTwo.Make} {CarTwo.Model}?");
+            CarTwo.MakeEngineNoise(Console.ReadLine());
+            Console.WriteLine("Let me hear the horn!");
+            CarTwo.MakeHonkNoise(Console.ReadLine());
+
+            JoesCars.AddCar(CarTwo);
+
+            var CarThree = new Car(1985, "Ford", "Fairlane", "put-put-pffffft", "crackle", false);
+            Console.WriteLine($"What's that noise coming from the {CarThree.Year} {CarThree.Make} {CarThree.Model}?");
+            CarThree.MakeEngineNoise(Console.ReadLine());
+            Console.WriteLine("Let me hear the horn!");
+            CarThree.MakeHonkNoise(Console.ReadLine());
+
+            JoesCars.AddCar(CarThree);
+
+            Console.WriteLine("Let's see what we've got...");
+            foreach (var car in JoesCars.Inventory)
+            {
+                Console.WriteLine($"Here's a {car.Year} {car.Make} {car.Model} that goes {car.EngineNoise}");
+            }
 
             //*************BONUS X 2*************//
 
