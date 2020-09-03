@@ -36,6 +36,7 @@ namespace CarLotSimulator
             CarOne.MakeHonkNoise(Console.ReadLine());
 
             JoesCars.AddCar(CarOne);
+            Console.WriteLine($"That makes {CarLot.numberOfCars} car{(CarLot.numberOfCars == 1 ? "" : "s")}.\n");
 
             var CarTwo = new Car()
             {
@@ -52,6 +53,7 @@ namespace CarLotSimulator
             CarTwo.MakeHonkNoise(Console.ReadLine());
 
             JoesCars.AddCar(CarTwo);
+            Console.WriteLine($"That makes {CarLot.numberOfCars} car{(CarLot.numberOfCars == 1 ? "" : "s")}.\n");
 
             var CarThree = new Car(1985, "Ford", "Fairlane", "put-put-pffffft", "crackle", false);
             Console.WriteLine($"What's that noise coming from the {CarThree.Year} {CarThree.Make} {CarThree.Model}?");
@@ -60,6 +62,7 @@ namespace CarLotSimulator
             CarThree.MakeHonkNoise(Console.ReadLine());
 
             JoesCars.AddCar(CarThree);
+            Console.WriteLine($"That makes {CarLot.numberOfCars} car{(CarLot.numberOfCars==1? "":"s")}.\n");
 
             Console.WriteLine("Let's see what we've got...");
             foreach (var car in JoesCars.Inventory)

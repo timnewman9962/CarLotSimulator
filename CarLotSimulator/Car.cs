@@ -45,7 +45,9 @@ namespace CarLotSimulator
         public void AddCar(Car someCar)
         {
             inventory.Add(someCar);
+            numberOfCars++;
         }
+        public static int numberOfCars;
     }
 
 }
